@@ -1,0 +1,1 @@
+// id, truck name, truck rating, truck price
