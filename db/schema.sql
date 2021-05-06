@@ -2,17 +2,15 @@ DROP DATABASE IF EXISTS foodtruck_db;
 
 CREATE DATABASE foodtruck_db;
 
-USE inventory_db;
+USE foodtruck_db;
 
-CREATE TABLE names(
+CREATE TABLE trucks(
     id INT NOT NULL AUTO_INCREMENT PRIMARY key,
-    foodtruck_name VARCHAR(50) NOT NULL
+    name VARCHAR(50) NOT NULL,
+    rating VARCHAR(30), 
+    category_id 
 );
 
-CREATE TABLE rating(
-  id INTEGER NOT NULL,
-  category_name VARCHAR(30) NOT NULL
-);
 
 CREATE TABLE categories(
   id INTEGER NOT NULL,

@@ -1,26 +1,23 @@
 USE foodtruck_db;
 
-INSERT INTO names (name) VALUES
-("Randizzle's"),
-("The Chicken Coupe"),
-("Phoenix Coqui'"),
-("Feednix Tacos"),
-("Waffle Crush"),
-("First Place Coffee"),
-("Morning Kick"),
-("Flippin Rice"),
-("Saffron Jack"),
-("Chinoz Grill");
-
-INSERT INTO rating (rating) VALUES 
-("Five Star")
+INSERT INTO trucks (name, rating) VALUES
+("Randizzle's", 'good'),
+("The Chicken Coupe", 'good'),
+("Phoenix Coqui'", 'good'),
+("Feednix Tacos", 'good'),
+("Waffle Crush", 'good'),
+("First Place Coffee", 'good'),
+("Morning Kick", 'good'),
+("Flippin Rice", 'good'),
+("Saffron Jack", 'good'),
+("Chinoz Grill", 'good');
 
 
-INSERT INTO categories(
+-- INSERT INTO categories(
     
-);
+-- );
 
-INSERT INTO PRICES
+-- INSERT INTO PRICES();
 
 
 
