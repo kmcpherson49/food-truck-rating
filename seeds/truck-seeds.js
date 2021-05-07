@@ -62,10 +62,47 @@ const user_data = [{
 ];
 
 const truck_data = [{
-    name: "",
-    rating: "",
+    name: "Randizzles",
+    rating: "Good",
     //create multiple truck and a review object
-}]
+},
+{
+    name: "The Chicken Coupe",
+    rating: "Good",
+},
+{
+    name: "Feednix Tacos",
+    rating: "Good",
+},
+{
+    name: "Waffle Crush",
+    rating: "Good",
+},
+{
+    name: "First Place Coffee",
+    rating: "Good",
+},
+{
+    name: "Phoenix Coqui'",
+    rating: "Good",
+},
+{
+    name: "Morning Kick",
+    rating: "Good",
+},
+{
+    name: "Flippin Rice",
+    rating: "Good",
+},
+{
+    name: "Saffron Jack",
+    rating: "Good",
+},
+{
+    name: "Chinoz Grill",
+    rating: "Good",
+},
+]
 
 const seedingData = async () => {
     await sequelize.sync({
