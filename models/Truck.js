@@ -20,10 +20,10 @@ Truck.init(
         type: DataTypes.STRING,
         allowNull: true,
     },
-    post: {
-      type: DataTypes.STRING,
-      allowNull: true,
-    },
+    // post: {
+    //   type: DataTypes.STRING,
+    //   allowNull: true,
+    // },
     category: {
       type: DataTypes.STRING,
       allowNull: false,
