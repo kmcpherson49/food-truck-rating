@@ -7,3 +7,8 @@ router.get('/login', (req, res) => {
   router.get('/signup', (req, res) => {
     res.render('signup');
   });
+
+// route to all foodtruck page
+router.get('/alltrucks', (req, res) => {
+    res.render('alltrucks');
+  });

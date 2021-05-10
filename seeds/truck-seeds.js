@@ -6,15 +6,14 @@ const sequelize = require("../config/connection");
 const truck_data = [{
     name: "Randizzles",
     rating: "Good",
-    phone: "",
-    email:"",
-    website:"",
+    phone: "1-991-224-8256 x361",
+    email:"Emmett9@hotmail.com",
+    website:"https://ashtyn.info",
     category: "",
     //create multiple truck and a review object
 },
 {
     name: "The Chicken Coupe",
-    rating: "Good",
     rating: "Good",
     phone: "",
     email:"",
