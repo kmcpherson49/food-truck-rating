@@ -1,1 +1,14 @@
-<!-- #each loop to populate all truck info, use flexbox columns to style
+{{!-- #each loop to populate all truck info, use flexbox columns to style --}}
+
+{{#each Trucks}}
+<h1>{{ truck_name}}</h1>
+<ul>
+  
+  <li>
+    <p>Website: {{website}}</p>
+    <p>Email: {{email}}</p>
+    <p>Phone number: {{phone}}</p>
+  </li>
+  
+</ul>
+{{/each}}
