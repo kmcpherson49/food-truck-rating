@@ -39,4 +39,4 @@ Post.init(
         }
 );
 
-module.exports = Truck;
+module.exports = Post;

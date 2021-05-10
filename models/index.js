@@ -2,27 +2,26 @@
 const Truck = require('./Truck');
 //const truck = require('./Truck');
 const User = require('./User');
+const Post = require('./Post');
 //const Category = require('./Category');
 const sequelize = require('../config/connection');
 
 // create associations
-User.hasMany(Truck, {
-  as: 'post',
+User.hasMany(Post, {
   foreignKey: 'user_id'
 });
 
-Truck.belongsTo(User, {
-  as: "post",
+Post.belongsTo(User, {
   foreignKey: 'user_id',
   onDelete: 'SET NULL'
 });
 
-User.belongsToMany(Truck, {
-  //through: Truck,
-  as: 'post',
-  foreignKey: 'user_id',
-  onDelete: 'SET NULL'
-});
+// User.belongsToMany(Truck, {
+//   //through: Truck,
+//   as: 'post',
+//   foreignKey: 'user_id',
+//   onDelete: 'SET NULL'
+// });
 
 // Vote.belongsTo(User, {
 //   foreignKey: 'user_id',
@@ -30,33 +29,31 @@ User.belongsToMany(Truck, {
 // });
 
 // Post.belongsTo(Truck), no Post model
-Truck.belongsTo(Truck, {
+Post.belongsTo(Truck, {
   through: 'post',
   foreignKey: 'truck_id',
   onDelete: 'SET NULL'
 });
 
-Truck.hasMany(Truck, {
-  foreignKey: 'post'
+Truck.hasMany(Post, {
+  foreignKey: 'truck_id'
 });
 
 // replace vote with
-User.hasMany(Truck, {
-  as: 'rating',
-  foreignKey: 'user_id'
-});
+// User.hasMany(Truck, {
+//   as: 'rating',
+//   foreignKey: 'user_id'
+// });
 
-Truck.hasMany(Truck, {
-  through: 'post',
-  as: 'rating',
-  foreignKey: 'post_id'
-});
+// Truck.hasMany(Rating, {
+//   foreignKey: 'post_id'
+// });
 
-Truck.belongsTo(User, {
-  as: 'rating',
-  foreignKey: 'user_id',
-  onDelete: 'SET NULL'
-});
+// Rating.belongsTo(User, {
+//   as: 'rating',
+//   foreignKey: 'user_id',
+//   onDelete: 'SET NULL'
+// });
 
 // Comment.belongsTo(Post, {
 //   foreignKey: 'post_id',
@@ -72,4 +69,4 @@ Truck.belongsTo(User, {
 //   foreignKey: 'post_id'
 // });
 
-module.exports = { User, Truck };
+module.exports = { User, Truck, Post };
