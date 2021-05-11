@@ -5,10 +5,8 @@ router.get('/', (req, res) => {
     res.render('homepage');
   });
 
-// route to login page
-router.get('/', (req, res) => {
-    console.log(req);
-    console.log(res);
+// route to login page when clicked on nav
+router.get('/login', (req, res) => {
     res.render('login');
   });
 
@@ -21,5 +19,9 @@ router.get('/', (req, res) => {
 router.get('/alltrucks', (req, res) => {
     res.render('alltrucks');
   });
+
+// *for Krista* add route to search for truck by name including Post, if nothing show error
+
+// route to submit button on reviews.handlebars to ad reviews to a truck
 
   module.exports = router;
