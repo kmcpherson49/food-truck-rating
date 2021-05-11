@@ -1,3 +1,6 @@
+const router = require('express').Router();
+const { User, Truck } = require('../../models');
+
 // route to login page
 router.get('/login', (req, res) => {
     res.render('login');
@@ -12,3 +15,5 @@ router.get('/login', (req, res) => {
 router.get('/alltrucks', (req, res) => {
     res.render('alltrucks');
   });
+
+  module.exports = router;
