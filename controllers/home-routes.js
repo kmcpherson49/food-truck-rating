@@ -5,14 +5,21 @@ router.get('/', (req, res) => {
     res.render('homepage');
   });
 
-// route to login page when clicked on nav
+// route to login page when clicked on nav !
 router.get('/login', (req, res) => {
+  if(req.session.logged_in){
+    res.redirect("/")
+    return;
+  }
     res.render('login');
   });
 
-// route to sign up page
+// route to sign up page !
   router.get('/signup', (req, res) => {
-    res.render('signup');
+    if(!req.session.logged_in){
+      res.redirect("/signup")
+    }
+    res.render('/');
   });
 
 // route to all foodtruck page
