@@ -1,8 +1,11 @@
 const router = require('express').Router();
-const { User, Truck } = require('../../models');
+const { User, Truck } = require('../models');
+const User = require('../models')
 
 // route to login page
-router.get('/login', (req, res) => {
+router.get('/', (req, res) => {
+    console.log(req);
+    console.log(res);
     res.render('login');
   });
 
