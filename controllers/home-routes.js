@@ -29,10 +29,12 @@ router.get('/alltrucks', (req, res) => {
 
 // *for Krista* add route to search for truck by name including Post, if nothing show error
 
+
 // route to input a review, submit button needs to be connected to route comment below
 router.get('/review', (req, res) => {
     res.render('review');
   });
 // route to submit button on reviews.handlebars to ad reviews to a truck
+router.post()
 
   module.exports = router;
