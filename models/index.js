@@ -1,6 +1,6 @@
 // import all models
 const Truck = require('./Truck');
-//const truck = require('./Truck');
+const Reviews = require('./Reviews');
 const User = require('./user');
 const Post = require('./Post');
 //const Category = require('./Category');
@@ -15,7 +15,15 @@ Post.belongsTo(User, {
   foreignKey: 'user_id',
   onDelete: 'SET NULL'
 });
-
+Reviews.belongsTo(User, {
+  foreignKey: 'user_id',
+  onDelete: 'SET NULL'
+});
+Reviews.belongsTo(Truck, {
+  foreignKey: 'truck_id',
+  onDelete: 'SET NULL'
+});
+//Create Review.js in models
 // User.belongsToMany(Truck, {
 //   //through: Truck,
 //   as: 'post',
@@ -69,4 +77,4 @@ Truck.hasMany(Post, {
 //   foreignKey: 'post_id'
 // });
 
-module.exports = { User, Truck, Post };
+module.exports = { User, Truck, Post, Reviews };
