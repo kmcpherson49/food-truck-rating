@@ -29,7 +29,7 @@ $(document).ready(function(){
             username: username
         })
         .then(function() {
-            window.location.replace('/members');
+            window.location.replace('/');
         })
         .catch(function(err) {
             console.log(err);

@@ -20,7 +20,8 @@ router.get('/login', (req, res) => {
     // if(!req.session.logged_in){
     //   res.redirect("/signup")
     // }
-    res.render('/');
+   // res.render('/');
+   res.render('signup')
   });
 
 // route to all foodtruck page
@@ -45,7 +46,24 @@ router.get('/alltrucks', (req, res) => {
   });
 
 // *for Krista* add route to search for truck by name including Post, if nothing show error
-
+router.get('/search', (req, res) => {
+    Truck.findOne({
+        where: {
+            truck_name: req.body.truck_name
+        }
+    })
+    .then(userSearch => {
+        if (!userSearch) {
+            res.status(404).json({ message: 'No truck found with that name' });
+            return;
+        }
+        res.render('/search')
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+});
 
 // route to input a review, submit button needs to be connected to route comment below
 router.get('/review', (req, res) => {

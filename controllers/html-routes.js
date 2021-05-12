@@ -11,12 +11,12 @@ module.exports = function(app){
 
     app.get('/login', function(req, res){
         if(req.user){
-            res.redirect('/members')
+            res.redirect('/')
         }
         res.sendFile(path.join(__dirname, '../views/login.handlebars'))
     })
 
-    app.get("/members", auth, function(req, res){
+    app.get('/', auth, function(req, res){
         res.sendFile(path.join(__dirname, '../views/homepage.handlebars'))
     })
 }
