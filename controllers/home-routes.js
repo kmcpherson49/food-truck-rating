@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const { Truck } = require('../models');
 
 // route to home page
 router.get('/', (req, res) => {
@@ -7,24 +8,40 @@ router.get('/', (req, res) => {
 
 // route to login page when clicked on nav !
 router.get('/login', (req, res) => {
-  if(req.session.logged_in){
-    res.redirect("/")
-    return;
-  }
+//   if(req.session.logged_in){
+//     res.redirect("/")
+//     return;
+//   }
     res.render('login');
   });
 
 // route to sign up page !
   router.get('/signup', (req, res) => {
-    if(!req.session.logged_in){
-      res.redirect("/signup")
-    }
+    // if(!req.session.logged_in){
+    //   res.redirect("/signup")
+    // }
     res.render('/');
   });
 
 // route to all foodtruck page
 router.get('/alltrucks', (req, res) => {
-    res.render('alltrucks');
+    Truck.findAll({
+        attributes: [
+            'truck_name',
+            'category',
+            'website',
+            'email',
+            'phone'
+        ]
+    })
+    .then(truckData => {
+        res.render('alltrucks', truckData);
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+    
   });
 
 // *for Krista* add route to search for truck by name including Post, if nothing show error
