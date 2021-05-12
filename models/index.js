@@ -5,7 +5,7 @@ const User = require('./User');
 const Post = require('./Post');
 //const Category = require('./Category');
 const sequelize = require('../config/connection');
-
+console.log("User", User),
 // create associations
 User.hasMany(Post, {
   foreignKey: 'user_id'
