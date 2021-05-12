@@ -52,7 +52,7 @@ router.get('/:id', (req, res) => {
       res.status(500).json(err);
     });
 });
-//
+
 router.post('/', (req, res) => {
   // expects {username: 'Lernantino', email: 'lernantino@gmail.com', password: 'password1234'}
   User.create({
@@ -75,7 +75,6 @@ router.post('/', (req, res) => {
     });
 });
 
-// needs to connect to the submit button on the login page
 router.post('/login', (req, res) => {
   // expects {email: 'lernantino@gmail.com', password: 'password1234'}
   User.findOne({
