@@ -17,10 +17,10 @@ router.get('/login', (req, res) => {
 
 // route to sign up page !
   router.get('/signup', (req, res) => {
-    // if(!req.session.logged_in){
-    //   res.redirect("/signup")
-    // }
-   // res.render('/');
+//     if(!req.session.logged_in){
+//       res.redirect("/signup")
+//     }
+//    res.render('/');
    res.render('signup')
   });
 
