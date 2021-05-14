@@ -1,3 +1,4 @@
+// making a change
 // id, truck name, truck rating, truck price
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
