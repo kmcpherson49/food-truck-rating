@@ -1,5 +1,5 @@
 const sequelize = require("../config/connection");
-//const {User,Truck,Post} = require("../models")
+const { Truck } = require("../models")
 
 
 
@@ -86,14 +86,18 @@ const truck_data = [{
 },
 ]
 
-const seedingData = async () => {
-    await sequelize.sync({
-        force: true
-    })
-    const users = await User.bulkCreate(user_data,{individualHooks: true, returning: true,})
-    process.exit(0)
-}
+// const seedingData = async () => {
+//     await sequelize.sync({
+//         force: true
+//     })
+//     const users = await User.bulkCreate(user_data,{individualHooks: true, returning: true,})
+//     process.exit(0)
+// }
 
 
 
-seedingData()
+// seedingData()
+
+const seedTruck = () => Post.bulkCreate(postdata);
+
+module.exports = seedTruck;

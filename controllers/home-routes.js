@@ -35,8 +35,8 @@ router.get('/alltrucks', (req, res) => {
             'phone'
         ]
     })
-    .then(truckData => {
-        res.render('alltrucks', truckData);
+    .then(trucks => {
+        res.render('alltrucks', {trucks});
     })
     .catch(err => {
         console.log(err);
