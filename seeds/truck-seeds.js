@@ -98,6 +98,6 @@ const truck_data = [{
 
 // seedingData()
 
-const seedTruck = () => Post.bulkCreate(postdata);
+const seedTruck = () => Truck.bulkCreate(truck_data);
 
 module.exports = seedTruck;

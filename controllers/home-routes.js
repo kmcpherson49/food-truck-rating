@@ -8,19 +8,19 @@ router.get('/', (req, res) => {
 
 // route to login page when clicked on nav !
 router.get('/login', (req, res) => {
-//   if(req.session.logged_in){
-//     res.redirect("/")
-//     return;
-//   }
+  // if(req.session.loggedin){
+  //   res.redirect("/")
+  //   return;
+  // }
     res.render('login');
   });
 
 // route to sign up page !
   router.get('/signup', (req, res) => {
-//     if(!req.session.logged_in){
-//       res.redirect("/signup")
-//     }
-//    res.render('/');
+    // if(!req.session.loggedin){
+    //   res.redirect("/signup")
+    // }
+   //res.render('/');
    res.render('signup')
   });
 
@@ -28,7 +28,7 @@ router.get('/login', (req, res) => {
 router.get('/alltrucks', (req, res) => {
     Truck.findAll({
         attributes: [
-            'truck_name',
+            'name',
             'category',
             'website',
             'email',

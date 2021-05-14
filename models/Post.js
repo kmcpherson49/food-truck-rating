@@ -13,7 +13,7 @@ Post.init(
             autoIncrement: true
         },
         review: {
-            type: DataTypes.STRING,
+            type: DataTypes.STRING(1000),
             allowNull: false,
         },
         user_id: {
