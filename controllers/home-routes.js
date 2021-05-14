@@ -45,7 +45,7 @@ router.get('/alltrucks', (req, res) => {
     
   });
 
-// *for Krista* add route to search for truck by name including Post, if nothing show error
+// add route to search for truck by name including Post, if nothing show error
 router.get('/search', (req, res) => {
     Truck.findOne({
         where: {
