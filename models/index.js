@@ -1,7 +1,7 @@
 // import all models
 const Truck = require('./Truck');
 const Reviews = require('./Reviews');
-const User = require('./Banana');
+const User = require('./SiteUser');
 const Post = require('./Post');
 //const Category = require('./Category');
 const sequelize = require('../config/connection');
@@ -38,7 +38,7 @@ Reviews.belongsTo(Truck, {
 
 // Post.belongsTo(Truck), no Post model
 Post.belongsTo(Truck, {
-  through: 'post',
+  //through: 'post',
   foreignKey: 'truck_id',
   onDelete: 'SET NULL'
 });

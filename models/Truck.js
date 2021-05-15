@@ -1,6 +1,6 @@
 // id, truck name, truck rating, truck price
-const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection');
+const { Model, DataTypes } = require("sequelize");
+const sequelize = require("../config/connection");
 
 class Truck extends Model {}
 
@@ -10,15 +10,15 @@ Truck.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
-      autoIncrement: true
+      autoIncrement: true,
     },
-    truck_name: {
+    name: {
       type: DataTypes.STRING,
       allowNull: false,
-      },
+    },
     rating: {
-        type: DataTypes.STRING,
-        allowNull: true,
+      type: DataTypes.STRING,
+      allowNull: true,
     },
     // post: {
     //   type: DataTypes.STRING,
@@ -38,14 +38,14 @@ Truck.init(
     },
     website: {
       type: DataTypes.STRING,
-      allowNull: true
-    }
+      allowNull: true,
+    },
   },
   {
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: 'truck'
+    modelName: "truck",
   }
 );
 
