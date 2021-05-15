@@ -1,11 +1,14 @@
 {{!-- #each loop to populate all truck info, use flexbox columns to style --}}
+<h1 class="has-text-weight-bold is-size-1 has-text-warning has-background-primary has-text-centered">All Food Trucks</h1>
 
+<div class='block'>
+  <div class='box has-text-centered'>
 {{#each trucks}}
-<h1>{{ truck_name }}</h1>
+<h1 class="has-text-weight-bold is-size-4 has-text-primary">{{ name }}</h1>
 <ul>
   
   <li>
-    <p>Category: {{ category }}</p>
+    {{!-- <p>Category: {{ category }}</p> --}}
     <p>Website: {{ website }}</p>
     <p>Email: {{ email }}</p>
     <p>Phone number: {{ phone }}</p>
@@ -13,3 +16,5 @@
   
 </ul>
 {{/each}}
+</div>
+</div>
