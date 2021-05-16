@@ -1,13 +1,17 @@
 $(document).ready(function(){
     var login = $('form.login');
-    var email = $('input#emailInput');
-    var password = $('input#passwordInput');
 
-    login.on('submit', function(event) {
+
+    $('#signIn').click(function(event) {
         event.preventDefault();
+        console.log("clicked");
+        var email = $('input#emailInput');
+        var password = $('input#passwordInput');
+        console.log(email, password)
+       // event.preventDefault();
         var userInput = {
-            email: email.val().trim(),
-            password: password.val().trim()
+            email: email.val(),
+            password: password.val()
         };
 
         if (!userInput.email || !userInput.password) {
