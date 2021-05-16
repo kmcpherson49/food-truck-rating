@@ -2,7 +2,7 @@
 
 ## About The Project
 
-![Food Truck Rating Screen Shot](./assets/images/planetarium-party-screenshot.jpg)
+![Food Truck Rating Screen Shot](./public/assets/images/food-truck-screenshot.jpg)
 
 >[Link to the website](https://local-food-truck-finder.herokuapp.com/)
 
